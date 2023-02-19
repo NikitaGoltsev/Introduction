@@ -1,8 +1,6 @@
 format:
 	clang-format -i *.c
 
-all: run_cpu_dbl run_cpu_flt run_gpu_dbl run_gpu_flt
-
 run_cpu_dbl:
 
 	export PGI_ACC_TIME = 1
