@@ -9,15 +9,15 @@ int main() {
   double *arr = (double *)malloc(sizeof(double) * N);
   double sum;
   sum = 0;
-//#pragma acc data create(arr[:N]) copyin(angle) copy(sum)
+  //#pragma acc data create(arr[:N]) copyin(angle) copy(sum)
   {
-//#pragma acc kernels
+    //#pragma acc kernels
     {
       for (int i = 0; i < N; i++) {
         arr[i] = sin(angle * i);
       }
     }
-//#pragma acc kernels
+    //#pragma acc kernels
     {
       for (int i = 0; i < N; i++) {
         sum += arr[i];

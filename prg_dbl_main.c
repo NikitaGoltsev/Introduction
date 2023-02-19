@@ -9,7 +9,7 @@ int main() {
   double *arr = (double *)malloc(sizeof(double) * N);
   double sum;
   sum = 0;
-#pragma acc data create(arr[:N]) copyin(angle) copy(sum)
+#pragma acc data create(arr[:N]) copyin(angle) copy(sum) # for gpu
   {
 #pragma acc kernels
     {
