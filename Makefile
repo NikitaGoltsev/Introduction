@@ -3,7 +3,7 @@ format:
 
 run_cpu_dbl:
 
-	export PGI_ACC_TIME = 1
+	export PGI_ACC_TIME=1
 	pgcc maindbl.c -pg -o file.out
 	./file.out
 	gprof file.out
