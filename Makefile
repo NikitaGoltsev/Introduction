@@ -1,7 +1,7 @@
 format:
 	clang-format -i *.c
 
-all:
+all: run_cpu_dbl run_cpu_flt run_gpu_dbl run_gpu_flt
 
 run_cpu_dbl:
 
@@ -34,12 +34,12 @@ run_cpu_flt:
 run_gpu_dbl:
 
 	export PGI_ACC_TIME = 1
-	pgcc file.c -acc -Minfo=accel -o file.out
+	pgcc prg_dbl_main.c -acc -Minfo=accel -o file.out
 	nvprof file.out
 	time ./file.out
 
 run_gpu_flt:
 	export PGI_ACC_TIME = 1
-	pgcc file.c -acc -Minfo=accel -o file.out
+	pgcc prg_flt_mainf.c -acc -Minfo=accel -o file.out
 	nvprof file.out
 	time ./file.out
