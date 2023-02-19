@@ -8,20 +8,11 @@ int main() {
   float *arr = (float *)malloc(sizeof(float) * N);
   float sum;
   sum = 0;
-  //#pragma acc data create(arr[:N]) copyin(angle) copy(sum)
-  {
-    //#pragma acc kernels
-    {
-      for (int i = 0; i < N; i++) {
-        arr[i] = sin(angle * i);
-      }
-    }
-    //#pragma acc kernels
-    {
-      for (int i = 0; i < N; i++) {
-        sum += arr[i];
-      }
-    }
+  for (int i = 0; i < N; i++) {
+    arr[i] = sin(angle * i);
+  }
+  for (int i = 0; i < N; i++) {
+    sum += arr[i];
   }
   printf("%.9g\n", sum);
   free(arr);
