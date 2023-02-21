@@ -15,7 +15,7 @@ test for gpu
 время: 
 		 				float  				double
 
-на cpu					
+на cpu										3.68**-10
 
 на cpu/multicore									
 

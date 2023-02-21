@@ -9,6 +9,7 @@ run_cpu_dbl:
 	gprof file.out
 	time ./file.out
 
+dbl_multicore_cpu:
 	export PGI_ACC_TIME=1
 	pgcc maindbl.c -pg -ta=multicore -o file.out
 	./file.out
