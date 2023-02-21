@@ -34,7 +34,7 @@ run_gpu_dbl:
 
 	export PGI_ACC_TIME=1
 	pgcc prg_dbl_main.c -acc -Minfo=accel -o file.out
-	nvprof file.out
+	nvprof ./file.out
 	time ./file.out
 
 run_gpu_flt:
