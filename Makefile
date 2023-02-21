@@ -2,7 +2,6 @@ format:
 	clang-format -i *.c
 
 run_cpu_dbl:
-
 	export PGI_ACC_TIME=1
 	pgcc maindbl.c -pg -o file.out
 	./file.out
@@ -24,6 +23,7 @@ run_cpu_flt:
 	gprof file.out
 	time ./file.out
 
+flt_multicore_cpu:
 	export PGI_ACC_TIME=1
 	pgcc maindflt.c -pg -ta=multicore -o file.out
 	./file.out
