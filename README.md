@@ -19,5 +19,5 @@ test for gpu
 
 на cpu/multicore		0.05				0.08 			
 
-на gpu
+на gpu										0.0368
 
