@@ -21,3 +21,4 @@ test for gpu
 
 на gpu					0.032893			0.036864
 
+<img src ="diog.png"></img>
