@@ -13,7 +13,7 @@ int main() {
 #pragma acc kernels
     {
       for (int i = 0; i < N; i++) {
-        arr[i] = sin(angle * i);
+        arr[i] = sinf(angle * i);
       }
     }
 #pragma acc kernels

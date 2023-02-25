@@ -9,7 +9,7 @@ int main() {
   float sum;
   sum = 0;
   for (int i = 0; i < N; i++) {
-    arr[i] = sin(angle * i);
+    arr[i] = sinf(angle * i);
   }
   for (int i = 0; i < N; i++) {
     sum += arr[i];
